@@ -5,9 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6331baf7-764c-45de-9b0f-2cd8fff5ab0d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/constructor/imagebuffer/ImageBuffer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/constructor/imagebuffer/ReflectiveFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/constructor/imagebuffer/TestImageBuffer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/tictactoe/game/Game.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/tictactoe/game/internal/Board.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/tictactoe/game/internal/BoardDimensions.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/tictactoe/game/internal/BoardLocation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/tictactoe/game/internal/BoardPrinter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/tictactoe/game/internal/Cell.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/tictactoe/game/internal/ComputerInputProvider.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/tictactoe/game/internal/ComputerPlayer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/tictactoe/game/internal/HumanPlayer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/tictactoe/game/internal/InputProvider.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/tictactoe/game/internal/KeyboardInputProvider.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/tictactoe/game/internal/Player.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/tictactoe/game/internal/Sign.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/tictactoe/game/internal/TicTacToeGame.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/tictactoe/init/TicTacToeWithReflection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +31,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Enum" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -39,7 +55,9 @@
     "Application.ConstructorExample.executor": "Run",
     "Application.ServerConfigurationTest.executor": "Run",
     "Application.TestImageBuffer.executor": "Run",
+    "Application.TicTacToeWithReflection.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
     "project.structure.last.edited": "Problems",
@@ -47,7 +65,15 @@
     "project.structure.side.proportion": "0.2"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.TestImageBuffer">
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="tictactoe.game" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="tictactoe.game" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.TicTacToeWithReflection">
     <configuration name="BuiltinClasses" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="builtinclasses.BuiltinClasses" />
       <module name="java-reflection-masterclass" />
@@ -100,8 +126,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TicTacToeWithReflection" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="tictactoe.init.TicTacToeWithReflection" />
+      <module name="java-reflection-masterclass" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tictactoe.init.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.TicTacToeWithReflection" />
         <item itemvalue="Application.TestImageBuffer" />
         <item itemvalue="Application.ServerConfigurationTest" />
         <item itemvalue="Application.ConstructorExample" />
