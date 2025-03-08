@@ -22,9 +22,9 @@
  *  SOFTWARE.
  */
 
-package tictactoe.game.internal;
+package constructor.tictactoe.game.internal;
 
-import tictactoe.game.Game;
+import constructor.tictactoe.game.Game;
 
 import java.util.Arrays;
 import java.util.List;

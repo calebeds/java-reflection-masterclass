@@ -1,7 +1,7 @@
-package tictactoe.init;
+package constructor.tictactoe.init;
 
-import tictactoe.game.Game;
-import tictactoe.game.internal.TicTacToeGame;
+import constructor.tictactoe.game.Game;
+import constructor.tictactoe.game.internal.TicTacToeGame;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;

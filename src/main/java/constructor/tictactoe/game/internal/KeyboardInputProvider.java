@@ -22,24 +22,32 @@
  *  SOFTWARE.
  */
 
-package tictactoe.game.internal;
+package constructor.tictactoe.game.internal;
 
-class HumanPlayer implements Player {
-    private static final String NAME = "You";
-    private final KeyboardInputProvider inputProvider;
+import java.util.Scanner;
 
-    public HumanPlayer(KeyboardInputProvider inputProvider) {
-        this.inputProvider = inputProvider;
+class KeyboardInputProvider implements InputProvider {
+    private final Scanner scanner = new Scanner(System.in);
+    private final BoardDimensions boardDimensions;
+
+    public KeyboardInputProvider(BoardDimensions boardDimensions) {
+        this.boardDimensions = boardDimensions;
     }
 
     @Override
-    public void play(Board board, Sign sign) {
-        BoardLocation nextMoveLocation = inputProvider.provideNextMove(board);
-        board.updateCell(nextMoveLocation.getRow(), nextMoveLocation.getColumn(), sign);
-    }
-
-    @Override
-    public String getPlayerName() {
-        return NAME;
+    public BoardLocation provideNextMove(Board board) {
+        int row;
+        int column;
+        do {
+            System.out.print("Please choose row: ");
+            row = scanner.nextInt();
+            System.out.print("Please choose column: ");
+            column = scanner.nextInt();
+        } while (row < 0
+                || row >= boardDimensions.getNumberOfRows()
+                || column < 0
+                || column >= boardDimensions.getNumberOfColumns()
+                || !board.isCellEmpty(row, column));
+        return new BoardLocation(row, column);
     }
 }

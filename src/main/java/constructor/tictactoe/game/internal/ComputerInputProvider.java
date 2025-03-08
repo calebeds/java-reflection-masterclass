@@ -22,37 +22,34 @@
  *  SOFTWARE.
  */
 
-package tictactoe.game.internal;
+package constructor.tictactoe.game.internal;
 
-class BoardPrinter {
-    private final BoardDimensions dimensions;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
 
-    public BoardPrinter(BoardDimensions dimensions) {
+class ComputerInputProvider implements InputProvider {
+    public final BoardDimensions dimensions;
+    private final Random random = new Random();
+
+    public ComputerInputProvider(BoardDimensions dimensions) {
         this.dimensions = dimensions;
     }
 
-    public void print(Board board) {
-        printHorizontalBorder();
+    @Override
+    public BoardLocation provideNextMove(Board board) {
+        List<BoardLocation> availableCells = new ArrayList<>();
 
-        printBoard(board);
-
-        printHorizontalBorder();
-    }
-
-    private void printBoard(Board board) {
         for (int r = 0; r < dimensions.getNumberOfRows(); r++) {
-            System.out.print("|");
             for (int c = 0; c < dimensions.getNumberOfColumns(); c++) {
-                System.out.print(String.format(" %s |", board.getPrintableCellSign(r, c)));
+                if (board.isCellEmpty(r, c)) {
+                    availableCells.add(new BoardLocation(r, c));
+                }
             }
-            System.out.println();
         }
-    }
 
-    private void printHorizontalBorder() {
-        for (int c = 0; c < dimensions.getNumberOfColumns() * 4 + 1; c++) {
-            System.out.print("-");
-        }
-        System.out.println();
+        int chosenCell = random.nextInt(availableCells.size());
+
+        return availableCells.get(chosenCell);
     }
 }

@@ -22,20 +22,37 @@
  *  SOFTWARE.
  */
 
-package tictactoe.game.internal;
+package constructor.tictactoe.game.internal;
 
-enum Sign {
-    EMPTY(' '),
-    X('X'),
-    Y('Y');
+class BoardPrinter {
+    private final BoardDimensions dimensions;
 
-    private char value;
-
-    Sign(char value) {
-        this.value = value;
+    public BoardPrinter(BoardDimensions dimensions) {
+        this.dimensions = dimensions;
     }
 
-    public char getValue() {
-        return this.value;
+    public void print(Board board) {
+        printHorizontalBorder();
+
+        printBoard(board);
+
+        printHorizontalBorder();
+    }
+
+    private void printBoard(Board board) {
+        for (int r = 0; r < dimensions.getNumberOfRows(); r++) {
+            System.out.print("|");
+            for (int c = 0; c < dimensions.getNumberOfColumns(); c++) {
+                System.out.print(String.format(" %s |", board.getPrintableCellSign(r, c)));
+            }
+            System.out.println();
+        }
+    }
+
+    private void printHorizontalBorder() {
+        for (int c = 0; c < dimensions.getNumberOfColumns() * 4 + 1; c++) {
+            System.out.print("-");
+        }
+        System.out.println();
     }
 }

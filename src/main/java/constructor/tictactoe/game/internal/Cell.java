@@ -22,24 +22,24 @@
  *  SOFTWARE.
  */
 
-package tictactoe.game.internal;
+package constructor.tictactoe.game.internal;
 
-class ComputerPlayer implements Player {
-    private static final String NAME = "Computer";
-    private final ComputerInputProvider locationProvider;
+class Cell {
+    private Sign sign;
 
-    public ComputerPlayer(ComputerInputProvider locationProvider) {
-        this.locationProvider = locationProvider;
+    public Cell() {
+        sign = Sign.EMPTY;
     }
 
-    @Override
-    public void play(Board board, Sign sign) {
-        BoardLocation location = locationProvider.provideNextMove(board);
-        board.updateCell(location.getRow(), location.getColumn(), sign);
+    public boolean isEmpty() {
+        return sign == Sign.EMPTY;
     }
 
-    @Override
-    public String getPlayerName() {
-        return NAME;
+    public Sign getSign() {
+        return sign;
+    }
+
+    public void setSign(Sign sign) {
+        this.sign = sign;
     }
 }

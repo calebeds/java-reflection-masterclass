@@ -22,18 +22,20 @@
  *  SOFTWARE.
  */
 
-package tictactoe.game.internal;
+package constructor.tictactoe.game.internal;
 
-class BoardDimensions {
-    private static final int NUM_OF_ROWS = 3;
-    private static final int NUM_OF_COLUMNS = 3;
+enum Sign {
+    EMPTY(' '),
+    X('X'),
+    Y('Y');
 
+    private char value;
 
-    public int getNumberOfRows() {
-        return NUM_OF_ROWS;
+    Sign(char value) {
+        this.value = value;
     }
 
-    public int getNumberOfColumns() {
-        return NUM_OF_COLUMNS;
+    public char getValue() {
+        return this.value;
     }
 }

@@ -22,34 +22,24 @@
  *  SOFTWARE.
  */
 
-package tictactoe.game.internal;
+package constructor.tictactoe.game.internal;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
+class ComputerPlayer implements Player {
+    private static final String NAME = "Computer";
+    private final ComputerInputProvider locationProvider;
 
-class ComputerInputProvider implements InputProvider {
-    public final BoardDimensions dimensions;
-    private final Random random = new Random();
-
-    public ComputerInputProvider(BoardDimensions dimensions) {
-        this.dimensions = dimensions;
+    public ComputerPlayer(ComputerInputProvider locationProvider) {
+        this.locationProvider = locationProvider;
     }
 
     @Override
-    public BoardLocation provideNextMove(Board board) {
-        List<BoardLocation> availableCells = new ArrayList<>();
+    public void play(Board board, Sign sign) {
+        BoardLocation location = locationProvider.provideNextMove(board);
+        board.updateCell(location.getRow(), location.getColumn(), sign);
+    }
 
-        for (int r = 0; r < dimensions.getNumberOfRows(); r++) {
-            for (int c = 0; c < dimensions.getNumberOfColumns(); c++) {
-                if (board.isCellEmpty(r, c)) {
-                    availableCells.add(new BoardLocation(r, c));
-                }
-            }
-        }
-
-        int chosenCell = random.nextInt(availableCells.size());
-
-        return availableCells.get(chosenCell);
+    @Override
+    public String getPlayerName() {
+        return NAME;
     }
 }

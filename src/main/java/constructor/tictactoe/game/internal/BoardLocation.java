@@ -22,11 +22,22 @@
  *  SOFTWARE.
  */
 
-package tictactoe.game.internal;
+package constructor.tictactoe.game.internal;
 
-interface Player {
+class BoardLocation {
+    private int row;
+    private int column;
 
-    void play(Board board, Sign sign);
+    public BoardLocation(int row, int column) {
+        this.row = row;
+        this.column = column;
+    }
 
-    String getPlayerName();
+    public int getRow() {
+        return row;
+    }
+
+    public int getColumn() {
+        return column;
+    }
 }
