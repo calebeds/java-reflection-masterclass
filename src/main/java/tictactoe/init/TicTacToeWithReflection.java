@@ -14,7 +14,8 @@ public class TicTacToeWithReflection {
         game.startGame();
     }
 
-    public static <T> T createObjectRecursively(Class<T> clazz) throws InvocationTargetException, InstantiationException, IllegalAccessException {
+    public static <T> T createObjectRecursively(Class<T> clazz) throws InvocationTargetException,
+            InstantiationException, IllegalAccessException {
         Constructor<?> constructor = getFirstConstructor(clazz);
 
         List<Object> constructorArguments = new ArrayList<>();
