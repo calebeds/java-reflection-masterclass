@@ -5,8 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6331baf7-764c-45de-9b0f-2cd8fff5ab0d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/arrays/ArrayFlattening.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/methods/api/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/methods/test/ProductTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/methods/api/Address.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/methods/api/Address.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,6 +38,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.ArrayFlattening.executor": "Run",
     "Application.ArraysIntro.executor": "Run",
     "Application.BuiltinClasses.executor": "Run",
     "Application.ConfigLoader.executor": "Run",
@@ -43,6 +46,7 @@
     "Application.FieldsIntroduction.executor": "Run",
     "Application.GetArrayElement.executor": "Run",
     "Application.JsonWriter.executor": "Run",
+    "Application.ProductTest.executor": "Run",
     "Application.ServerConfigurationTest.executor": "Run",
     "Application.TestImageBuffer.executor": "Run",
     "Application.TicTacToeWithReflection.executor": "Run",
@@ -73,22 +77,9 @@
       <recent name="dynamicconfigloader.data" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.ArrayFlattening">
+  <component name="RunManager" selected="Application.ProductTest">
     <configuration name="ArrayFlattening" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="arrays.ArrayFlattening" />
-      <module name="java-reflection-masterclass" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="arrays.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ArraysIntro" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="arrays.ArraysIntro" />
       <module name="java-reflection-masterclass" />
       <extension name="coverage">
         <pattern>
@@ -126,6 +117,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ProductTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="methods.test.ProductTest" />
+      <module name="java-reflection-masterclass" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="methods.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="arrays.jsonserializerwitharrays.jsonwriter.JsonWriter" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="arrays.jsonserializerwitharrays.jsonwriter.JsonWriter" />
       <module name="java-reflection-masterclass" />
@@ -141,11 +145,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ProductTest" />
         <item itemvalue="Application.ArrayFlattening" />
         <item itemvalue="Application.ConfigLoader" />
         <item itemvalue="Application.GetArrayElement" />
         <item itemvalue="Application.arrays.jsonserializerwitharrays.jsonwriter.JsonWriter" />
-        <item itemvalue="Application.ArraysIntro" />
       </list>
     </recent_temporary>
   </component>
