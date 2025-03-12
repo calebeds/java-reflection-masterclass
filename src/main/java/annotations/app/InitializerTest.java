@@ -2,6 +2,8 @@ package annotations.app;
 
 import annotations.app.annotationsapp.InitializerClass;
 import annotations.app.annotationsapp.InitializerMethod;
+import annotations.app.annotationsapp.RetryOperation;
+import annotations.app.annotationsapp.ScanPackages;
 
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
@@ -16,14 +18,22 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Set;
 
+@ScanPackages({"annotations.app", "annotations.app.configs", "annotations.app.databases", "annotations.app.http"})
 public class InitializerTest {
-    public static void main(String[] args) throws InvocationTargetException, NoSuchMethodException, InstantiationException, IllegalAccessException, URISyntaxException, IOException, ClassNotFoundException {
-        initialize("annotations.app", "annotations.app.configs", "annotations.app.databases", "annotations.app.http");
+    public static void main(String[] args) throws Throwable {
+        initialize();
     }
 
-    private static void initialize(String... packageNames) throws NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException, URISyntaxException, IOException, ClassNotFoundException {
-        List<Class<?>> classes = getAllClasses(packageNames);
+    private static void initialize() throws Throwable {
+        ScanPackages scanPackages = InitializerTest.class.getAnnotation(ScanPackages.class);
+
+        if(scanPackages == null || scanPackages.value().length == 0) {
+            return;
+        }
+
+        List<Class<?>> classes = getAllClasses(scanPackages.value());
 
         for(Class<?> clazz: classes) {
             if(!clazz.isAnnotationPresent(InitializerClass.class)) {
@@ -35,7 +45,33 @@ public class InitializerTest {
             Object instance = clazz.getDeclaredConstructor().newInstance();
 
             for(Method method: methods) {
+                callInitializingMethod(instance, method);
+            }
+        }
+    }
+
+    private static void callInitializingMethod(Object instance, Method method) throws Throwable {
+        RetryOperation retryOperation = method.getAnnotation(RetryOperation.class);
+
+        int numberOfRetries = retryOperation == null ? 0 : retryOperation.numberOfRetries();
+
+        while (true) {
+            try {
                 method.invoke(instance);
+                break;
+            } catch (InvocationTargetException e) {
+                Throwable targetException = e.getTargetException();
+
+                if(numberOfRetries > 0 && Set.of(retryOperation.retryExceptions()).contains(targetException.getClass())) {
+                    numberOfRetries--;
+
+                    System.out.println("Retrying...");
+                    Thread.sleep(retryOperation.durationBetweenRetriesMs());
+                } else if(retryOperation != null) {
+                    throw new Exception(retryOperation.failureMessage(), targetException);
+                } else {
+                    throw targetException;
+                }
             }
         }
     }
