@@ -5,10 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6331baf7-764c-45de-9b0f-2cd8fff5ab0d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/annotations/bestgamesfinder/SqlQueryBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/annotations/repeatableannotations/RepeatableAnnotationsTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/annotations/repeatableannotations/annotations/Annotations.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/annotations/repeatableannotations/loaders/Cache.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/annotations/bestgamesfinder/BestGameFinderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/annotations/bestgamesfinder/BestGameFinderTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/annotations/bestgamesfinder/annotationsbestgame/Annotations.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/annotations/bestgamesfinder/annotationsbestgame/Annotations.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,6 +52,7 @@
     "Application.JsonWriter.executor": "Run",
     "Application.Polymorphism.executor": "Run",
     "Application.ProductTest.executor": "Run",
+    "Application.RepeatableAnnotationsTest.executor": "Run",
     "Application.ServerConfigurationTest.executor": "Run",
     "Application.TestImageBuffer.executor": "Run",
     "Application.TicTacToeWithReflection.executor": "Run",
@@ -85,7 +86,7 @@
       <recent name="dynamicconfigloader.data" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.BestGameFinderTest">
+  <component name="RunManager" selected="Application.RepeatableAnnotationsTest">
     <configuration name="AuctionExample" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="modifiers.AuctionExample" />
       <module name="java-reflection-masterclass" />
@@ -138,12 +139,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ProductTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="methods.test.ProductTest" />
+    <configuration name="RepeatableAnnotationsTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="annotations.repeatableannotations.RepeatableAnnotationsTest" />
       <module name="java-reflection-masterclass" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="methods.test.*" />
+          <option name="PATTERN" value="annotations.repeatableannotations.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -153,11 +154,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.RepeatableAnnotationsTest" />
         <item itemvalue="Application.BestGameFinderTest" />
         <item itemvalue="Application.InitializerTest" />
         <item itemvalue="Application.AuctionExample" />
         <item itemvalue="Application.Polymorphism" />
-        <item itemvalue="Application.ProductTest" />
       </list>
     </recent_temporary>
   </component>
@@ -208,6 +209,21 @@
           <url>file://$PROJECT_DIR$/src/main/java/annotations/app/InitializerTest.java</url>
           <line>37</line>
           <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/annotations/repeatableannotations/RepeatableAnnotationsTest.java</url>
+          <line>39</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/annotations/repeatableannotations/RepeatableAnnotationsTest.java</url>
+          <line>35</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/annotations/repeatableannotations/RepeatableAnnotationsTest.java</url>
+          <line>93</line>
+          <option name="timeStamp" value="13" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
