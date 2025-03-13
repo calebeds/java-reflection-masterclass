@@ -5,11 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6331baf7-764c-45de-9b0f-2cd8fff5ab0d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/annotations/bestgamesfinder/BestGameFinderTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/annotations/bestgamesfinder/BestGamesFinder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/annotations/bestgamesfinder/annotationsbestgame/Annotations.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/annotations/bestgamesfinder/databases/Database.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/annotations/bestgamesfinder/SqlQueryBuilder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/annotations/bestgamesfinder/BestGameFinderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/annotations/bestgamesfinder/BestGameFinderTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/annotations/bestgamesfinder/annotationsbestgame/Annotations.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/annotations/bestgamesfinder/annotationsbestgame/Annotations.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,6 +42,7 @@
     "Application.ArrayFlattening.executor": "Run",
     "Application.ArraysIntro.executor": "Run",
     "Application.AuctionExample.executor": "Run",
+    "Application.BestGameFinderTest.executor": "Run",
     "Application.BuiltinClasses.executor": "Run",
     "Application.ConfigLoader.executor": "Run",
     "Application.ConstructorExample.executor": "Run",
