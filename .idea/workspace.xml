@@ -5,9 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6331baf7-764c-45de-9b0f-2cd8fff5ab0d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/annotations/repeatableannotations/RepeatableAnnotationsTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/annotations/repeatableannotations/annotations/Annotations.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/annotations/repeatableannotations/loaders/Cache.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dynamicproxing/measuringdynamicproxing/MeasuringDynamicProxyMain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dynamicproxing/measuringdynamicproxing/external/DatabaseReader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dynamicproxing/measuringdynamicproxing/external/HttpClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dynamicproxing/measuringdynamicproxing/external/impl/DatabaseReaderImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dynamicproxing/measuringdynamicproxing/external/impl/HttpClientImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -19,8 +21,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="Interface" />
         <option value="AnnotationType" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -50,6 +52,7 @@
     "Application.GetArrayElement.executor": "Run",
     "Application.InitializerTest.executor": "Run",
     "Application.JsonWriter.executor": "Run",
+    "Application.MeasuringDynamicProxyMain.executor": "Run",
     "Application.Polymorphism.executor": "Run",
     "Application.ProductTest.executor": "Run",
     "Application.RepeatableAnnotationsTest.executor": "Run",
@@ -71,6 +74,8 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="dynamicproxing.measuringdynamicproxing.external" />
+      <recent name="dynamicproxing.measuringdynamicproxing.external.impl" />
       <recent name="modifiers.auction" />
       <recent name="tictactoe.game" />
     </key>
@@ -79,6 +84,8 @@
       <recent name="$PROJECT_DIR$/src/main/java/tictactoe/game/internal" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="dynamicproxing.measuringdynamicproxing" />
+      <recent name="dynamicproxing.measuringdynamicproxing.external" />
       <recent name="modifiers" />
       <recent name="tictactoe.game" />
     </key>
@@ -86,7 +93,7 @@
       <recent name="dynamicconfigloader.data" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.RepeatableAnnotationsTest">
+  <component name="RunManager" selected="Application.MeasuringDynamicProxyMain">
     <configuration name="AuctionExample" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="modifiers.AuctionExample" />
       <module name="java-reflection-masterclass" />
@@ -126,12 +133,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Polymorphism" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="methods.polymorphism.Polymorphism" />
+    <configuration name="MeasuringDynamicProxyMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="dynamicproxing.measuringdynamicproxing.MeasuringDynamicProxyMain" />
       <module name="java-reflection-masterclass" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="methods.polymorphism.*" />
+          <option name="PATTERN" value="dynamicproxing.measuringdynamicproxing.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -154,11 +161,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.MeasuringDynamicProxyMain" />
         <item itemvalue="Application.RepeatableAnnotationsTest" />
         <item itemvalue="Application.BestGameFinderTest" />
         <item itemvalue="Application.InitializerTest" />
         <item itemvalue="Application.AuctionExample" />
-        <item itemvalue="Application.Polymorphism" />
       </list>
     </recent_temporary>
   </component>
@@ -209,21 +216,6 @@
           <url>file://$PROJECT_DIR$/src/main/java/annotations/app/InitializerTest.java</url>
           <line>37</line>
           <option name="timeStamp" value="10" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/annotations/repeatableannotations/RepeatableAnnotationsTest.java</url>
-          <line>39</line>
-          <option name="timeStamp" value="11" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/annotations/repeatableannotations/RepeatableAnnotationsTest.java</url>
-          <line>35</line>
-          <option name="timeStamp" value="12" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/annotations/repeatableannotations/RepeatableAnnotationsTest.java</url>
-          <line>93</line>
-          <option name="timeStamp" value="13" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
